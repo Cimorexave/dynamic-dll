@@ -21,7 +21,8 @@ while (!inputIsValid())
 }
 Console.WriteLine(input);
 Assembly assembly = Assembly.LoadFile(path: input ?? "");
-Type type = assembly?.GetType("Monatsjournal.Monatsjournal")!;
+//Type type = assembly?.GetType("Monatsjournal.Monatsjournal")!;
+Type type = assembly?.GetType("ImportClassLib.Monats")!;
 MethodInfo method = type?.GetMethod("Convert")!;
 Console.WriteLine($"assembly: {assembly} class: {type} method: {method}");
 _ = method?.Invoke(null, null);
