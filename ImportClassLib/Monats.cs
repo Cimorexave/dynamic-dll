@@ -6,6 +6,6 @@ public class Monats
     {
         Console.WriteLine("Converted (did nothing!)");
     }
-    public static void SayHi() { Console.WriteLine("Hi!"); }
+    public static void SayHi() { Console.WriteLine("Hi! (from ImportClassLib.Monats.SayHi)"); }
     public static void PrintMessage(string message) { Console.WriteLine(message); }
 }
