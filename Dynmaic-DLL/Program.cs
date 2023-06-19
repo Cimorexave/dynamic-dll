@@ -23,7 +23,13 @@ Console.WriteLine(input);
 Assembly assembly = Assembly.LoadFile(path: input ?? "");
 //Type type = assembly?.GetType("Monatsjournal.Monatsjournal")!;
 Type type = assembly?.GetType("ImportClassLib.Monats")!;
-MethodInfo method = type?.GetMethod("SayHi")!;
-Console.WriteLine($"assembly: {assembly} class: {type} method: {method}");
-_ = method?.Invoke(null, null);
+//MethodInfo method = type?.GetMethod("SayHi")!;
+//Console.WriteLine($"assembly: {assembly} class: {type} method: {method}");
+//_ = method?.Invoke(null, null);
+MethodInfo PrintMessage = type.GetMethod("PrintMessage")!;
+PrintMessage?.Invoke(null, new object[] { "the argument that was passed in." });
+
+
 Console.ReadLine();
+
+
